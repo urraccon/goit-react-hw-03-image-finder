@@ -63,6 +63,7 @@ class App extends Component {
     this.setState({
       page,
       term,
+      searchResults: [],
     });
     this.requestData(term, page);
   };
