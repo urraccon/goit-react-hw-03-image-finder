@@ -78,11 +78,12 @@ class App extends Component {
   };
 
   openModal = evt => {
+    debugger;
     console.log(evt);
     const itemId = evt.target.id;
     const { searchResults } = this.state;
     // debugger;
-    const item = searchResults.filter(elem => elem.id == itemId);
+    const item = searchResults.filter(elem => elem.id === Number(itemId));
     // console.log(item);
     this.setState({
       openImage: item,
