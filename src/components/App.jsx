@@ -38,7 +38,7 @@ class App extends Component {
           isMoreResults: false,
         });
       } else {
-        console.log(data);
+        // console.log(data);
         this.setState(prev => {
           return {
             searchResults: prev.searchResults.concat(data),
@@ -57,7 +57,7 @@ class App extends Component {
 
   searchTerm = evt => {
     evt.preventDefault();
-    console.log(evt);
+    // console.log(evt);
     const term = evt.target[1].value;
     const page = 1;
     this.setState({
@@ -79,12 +79,12 @@ class App extends Component {
   };
 
   openModal = evt => {
-    debugger;
-    console.log(evt);
+    // debugger;
+    // console.log(evt);
     const itemId = evt.target.id;
     const { searchResults } = this.state;
     // debugger;
-    const item = searchResults.filter(elem => elem.id === Number(itemId));
+    const [item] = searchResults.filter(elem => elem.id === Number(itemId));
     // console.log(item);
     this.setState({
       openImage: item,
@@ -94,7 +94,7 @@ class App extends Component {
   };
 
   keyDownHandler = evt => {
-    console.log(evt.key);
+    // console.log(evt.key);
     if (evt.key === 'Escape') {
       this.setState({
         isModalOpen: false,
@@ -106,7 +106,7 @@ class App extends Component {
   render() {
     const { isLoading, searchResults, isMoreResults, openImage, isModalOpen } =
       this.state;
-    console.log(searchResults);
+    // console.log(searchResults);
     return (
       <>
         <div className={styles.app}>

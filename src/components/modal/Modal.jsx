@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Modal = ({ item, onClick, onKeyDown }) => {
   //   debugger;
-  const { largeImageURL, tags } = item[0];
+  const { largeImageURL, tags } = item;
   return (
     <div className={styles.overlay} onClick={onClick} onKeyDown={onKeyDown}>
       <div className={styles.modal}>

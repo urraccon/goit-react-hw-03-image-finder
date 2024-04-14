@@ -9,7 +9,7 @@ const ImageGalleryItem = ({ item, onClick }) => {
         id={id}
         src={webformatURL}
         alt={tags}
-        className={styles.imageGalleryItemsImage}
+        className={styles.imageGalleryItemImage}
         onClick={onClick}
       />
     </li>
